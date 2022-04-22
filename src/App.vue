@@ -11,7 +11,8 @@ export default {
   name: 'App',
   components: {
     mainForm
-  }
+  },
+  
 }
 </script>
 

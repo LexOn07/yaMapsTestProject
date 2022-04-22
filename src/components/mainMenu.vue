@@ -17,7 +17,7 @@ export default {
     mouseListItem
   },
   props: {
-    data: Object,
+    data: Array,
   },
   data(){
     return{

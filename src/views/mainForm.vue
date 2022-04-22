@@ -1,6 +1,6 @@
 <template>
   <div class="mainForm">
-    <mainMenu @mouseenter="resizePoint(getIndexPointById($event), [60, 60])" @mouseleave="resizePoint(getIndexPointById($event), [42, 42])" :data="data" class="mainMenu" />
+    <mainMenu @mouseenter="resizePoint(getIndexPointById($event), [60, 60])" @mouseleave="resizePoint(getIndexPointById($event), [42, 42])" :data="dataPoint" class="mainMenu" />
     <div id="map"></div>
   </div>  
 </template>
@@ -16,7 +16,7 @@ export default {
   },
   data(){
       return{
-          data:[
+          dataPoint:[
             {
               "id": 1,
               "latitude": 50.760918,
@@ -94,7 +94,7 @@ export default {
       this.map.controls.remove('typeSelector');
       this.map.controls.remove('fullscreenControl');
       this.map.controls.remove('rulerControl');
-      this.data.forEach(point => {
+      this.dataPoint.forEach(point => {
         this.addPoint([point.latitude, point.longitude], point.name, point.name, [42, 42])
       });
     },
@@ -117,7 +117,7 @@ export default {
     },
     getIndexPointById: function(id){
       let index = null
-      this.data.forEach((el, idx) => {
+      this.dataPoint.forEach((el, idx) => {
         if(el.id == id){
           index = idx
         }
@@ -128,7 +128,11 @@ export default {
     }
   },
   mounted(){
-    ymaps.ready(this.initMap());
+      ymaps.ready(() => {
+        this.$nextTick(() => {
+          this.initMap()
+        })
+      });
   }
 }
 </script>

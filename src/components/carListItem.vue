@@ -21,6 +21,7 @@ export default {
     display: flex;
     align-items: center;
     padding: 10px 8px;
+    border-bottom: 1px solid $grey;
 }
 .carListItem:hover{
     background-color: $yellow;
