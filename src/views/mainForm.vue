@@ -129,9 +129,9 @@ export default {
   },
   mounted(){
       ymaps.ready(() => {
-        this.$nextTick(() => {
+        setInterval(() => { //на всякий случай чтоб точно всё успело подгрузить
           this.initMap()
-        })
+        }, 100)
       });
   }
 }
