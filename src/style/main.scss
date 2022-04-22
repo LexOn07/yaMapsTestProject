@@ -1,0 +1,29 @@
+@font-face {
+    font-family: 'Metropolis';
+    font-weight: 600;
+    src: url('~@/fonts/Metropolis-Regular.otf') format('OpenType');
+}
+@font-face {
+    font-family: 'Metropolis';
+    font-weight: 500;
+    src: url('~@/fonts/Metropolis-Light.otf') format('OpenType');
+}
+@font-face {
+    font-family: 'Metropolis';
+    font-weight: 400;
+    src: url('~@/fonts/Metropolis-ExtraLight.otf') format('OpenType');
+}
+@font-face {
+    font-family: 'Metropolis';
+    font-weight: 700;
+    src: url('~@/fonts/Metropolis-SemiBold.otf') format('OpenType');
+}
+
+
+
+
+
+
+//Переменные css
+$yellow: rgba(255, 245, 0, 0.4);
+$grey: #F2F2F2;
